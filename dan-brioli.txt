@@ -1,0 +1,185 @@
+https://codepen.io/dbrioli/pen/wvKwvxV
+
+    1. What is Semantic HTML? 
+
+HTML tags designated to contain certain information, like contact information, article posts, header and footer, etc.
+
+    2. What is HTML used for? 
+
+Telling web browsers how to display information.
+
+    3. What is an attribute and where do we put it? 
+
+An attribute is a parameter for a tag. It is put in the tag opening (<a href="xyz"></a> where href is an attribute of a.)
+
+    4. What is the h1 tag used for? How many times should I use it on a page?
+
+The most important or "emphasized" heading. It probably should be used once, or a handful of times, depending on the site design.
+
+    5. Name two tags that have required attributes
+
+a, img
+
+    6. What do we put in the head of our HTML document? 
+
+Metadata (title, etc.)
+
+    7. What is an id?
+
+An attribute used in any html tag to give it an identifier, which can be used for styles, scripts, etc.
+
+    8. What elements can I add an id to? 
+
+Any.
+
+    9. How many times can I use the same id on a page? 
+
+Once.
+
+    10. What is a class? 
+
+A class is an identifier which can be added to multiple elements (it isn't unique like id)
+
+    11. What elements can I add a class to? 
+
+Any.
+
+    12. How many times can I use the same class on a page? 
+
+As many times as there are elements.
+
+    13. How do I get my link to open in a new tab?
+
+target="_blank" attribute.
+
+    14. What is the alt attribute in the image tag used for? 
+
+Displays text when image doesn't load, or when mouse hovers over image.
+
+    15. How do I reference an id?
+
+Use a hash and the id name. #id_name
+
+    16. What is the difference between a section and a div
+
+A section is a logically grouped set of elements on a page that should be considered their own "section" of the page.
+A div is just a generic grouping of child elements. They do not have any necessary relation except maybe from the style applied to them from their relation to div.
+
+    17. What is CSS used for? 
+
+Adding styles/moderate formatting to HTML content.
+
+    18. How to we select an element? Example - every h2 on the page
+
+h2 {}
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+
+An id is a unique identifier that can only be used once on a page. Example: id="top" can be used for a nav button that sends you to the top of the page.
+A class is a group identifier that can be used many times per page. Example: class="birthday" can be used on elements that are related to a birthday style, maybe a color scheme of pastels, or brighter colors.
+
+    20. How do we select classes in CSS?
+
+.class_name {}
+
+    21. How do we select a p element with a single class of “human””?
+
+p.human {}
+
+    22. What is a parent child selector? When would this be useful? 
+
+parent > child
+
+Or something like...
+
+div > p {}
+
+The above will select all p which have a div parent. It is useful when you want to adjust the style of children elements who match a parent criteria.
+
+    23. How do you select all links within a div with the class of sidebar?
+
+div.sidebar a:link {}
+
+    24. What is a pseudo selector?
+
+Defines a special state of an element, like a:hover, which defines the style to be used when a link is hovered over by the mouse.
+
+    25. What do we use the change the spacing between lines?
+
+line-height
+
+    26. What do we use to change the spacing between letters?
+
+letter-spacing
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize;
+
+    28. How do I add a 1px border around my div that is dotted and black?
+
+div {
+
+border-style: dotted;
+border-color: black;
+
+}
+
+    29. How do I select everything on the page? 
+
+*{}
+
+    30. How do I write a comment in CSS?
+
+/* comment text here */
+
+    31. How do I find out what file I am in, when I am using the command line? 
+
+pwd
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+
+ls
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+
+rm
+It does not have an "undo" functionality.
+
+    34. Why should I use version control? 
+
+To backup files, to undo mistakes, to control code changes when working with a group of devs, etc.
+
+    35. How often should I commit to github?
+
+Preferably once, unless you need to make changes to something already uploaded to gh, or you are worried that you need external backup. Usually
+gh commits are done when you want to merge changes to a master (or other) branch. So that would probably be when you are done with a "project" in
+ls sprint cycles, i.e., daily.
+
+    36. What is the command we would use to push our repo up to github? 
+
+git push
+
+    37. Walk me through Lambda's git flow. 
+
+Fork the project repo.
+Add the TL as a collaborator in github.
+Clone the repo to your local machine so it can be worked on. (Copy to clipboard from github.)
+cd to the clone parent directory on your local machine.
+$ git clone link.git
+$ cd repo_dir
+$ git checkout -b 'dan-brioli'
+(work on the repo and make changes)
+git add .
+git commit -m "Commit message that explains what changes have been made"
+git push -u origin branch-name (branch-name will be dan-brioli if using the above naming convention during git checkout)
+Submit pull request on github since the changes should be up now.
+	Go to your forked repo, click the branch dropdown, select your branch, and click New Pull Request.
+	You will be redirected to the PR page.
+	Do not click CREATE yet.
+	Click the base repository dropdown, and change it to your forked repo instead of the LS repo.
+	Add your TL as a reviewer.
+	Submit the PR.
+	Do not merge - this will be done by the TL after review.
